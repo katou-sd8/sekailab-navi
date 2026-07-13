@@ -15,9 +15,9 @@
 // ============================================================
 
 const CONFIG = {
-  LOG_FORM_URL: "",      // 例: "https://docs.google.com/forms/d/e/1FAIpQL.../viewform"
-  LOG_ENTRY_CARD: "",    // 「章とカード」質問（記述式）の事前入力ID。例: "entry.1234567"
-  LOG_ENTRY_TEXT: "",    // 「ログ本文」質問（段落）の事前入力ID。例: "entry.7654321"
+  LOG_FORM_URL: "https://docs.google.com/forms/d/e/1FAIpQLSeepvoNUG4C04APpVmVRSUf7bCDhfPBtv9y-4xvK-hyghyWXQ/viewform",
+  LOG_ENTRY_CARD: "entry.582764719",
+  LOG_ENTRY_TEXT: "entry.2002175275",
   // ↑この2つが揃うと、アプリの「📤 提出する」ボタンが有効になり、
   //   生徒が書いたログが自動で入った状態でフォームが開く（生徒は送信を押すだけ）。
   //   同時にマイログにも自動保存されるので、二度書きは発生しない。
