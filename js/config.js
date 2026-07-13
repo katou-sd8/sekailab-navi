@@ -16,7 +16,11 @@
 
 const CONFIG = {
   LOG_FORM_URL: "",      // 例: "https://docs.google.com/forms/d/e/1FAIpQL.../viewform"
-  LOG_ENTRY_CARD: "",    // 例: "entry.1234567"
+  LOG_ENTRY_CARD: "",    // 「章とカード」質問（記述式）の事前入力ID。例: "entry.1234567"
+  LOG_ENTRY_TEXT: "",    // 「ログ本文」質問（段落）の事前入力ID。例: "entry.7654321"
+  // ↑この2つが揃うと、アプリの「📤 提出する」ボタンが有効になり、
+  //   生徒が書いたログが自動で入った状態でフォームが開く（生徒は送信を押すだけ）。
+  //   同時にマイログにも自動保存されるので、二度書きは発生しない。
 
   // 生徒が使うAIの名前（画面の案内文に表示されます）
   APPROVED_AI: "Gemini（学校のGoogleアカウントでログインして使う）",
@@ -27,11 +31,19 @@ const CONFIG = {
   // 空文字のままならボタンは表示されません。
   // ============================================================
   MANUAL_LINKS: {
-    start: "",   // スタート（旧β版 Ch1〜3 相当のスライド）
-    emp: "",     // Chapter 4 実証研究デッキ
-    con: "",     // Chapter 5 構成研究デッキ
-    act: "",     // Chapter 6 行動デッキ
-    cre: "",     // Chapter 7 創作デッキ
+    start: "https://docs.google.com/presentation/d/1UTJ6SJyXeyPdHQMtHzvV2opYqqUvgT6uxiCsmAv-GvA/edit",  // せかいラボ マニュアル β版
+    emp: "https://docs.google.com/presentation/d/1_-L5XZqf9ZMBZ7aesomD9BOjrL1BB6_A8CmwQ37btgs/edit",    // Ch4 実証研究 生徒用スライド
+    con: "https://docs.google.com/presentation/d/18qtX0acYiPSeGi2nkP2MY5_KOCgDc4qO_xlfKRdPwMg/edit",    // Ch5 構成研究 生徒用スライド
+    act: "https://docs.google.com/presentation/d/1bR6TNyYyQHQwfi7e-1ANUp-NgWYOAWpUj2iaGUbL9nM/edit",    // Ch6 行動 生徒用スライド
+    cre: "https://docs.google.com/presentation/d/1c461QkOCBWnfobJ1wdxtxmZrcyPqupKVnCWbenJUNzg/edit",    // Ch7 創作 生徒用スライド
+  },
+
+  // ルート別ワークブック（Googleスプレッドシート）
+  WORKBOOK_LINKS: {
+    emp: "https://docs.google.com/spreadsheets/d/181UWoGo2IlvLRzt1YNmEsikwqwQNl8AcF2LoZHOO29c/edit",    // Ch4 実証研究 ワークブック
+    con: "https://docs.google.com/spreadsheets/d/1HDxSZ3PQkgEzb8of8lBhKeJ5nqvoDiLAHu74Rpt2Ymk/edit",    // Ch5 構成研究 ワークブック
+    act: "https://docs.google.com/spreadsheets/d/1YAP9cxrAci4ghQstOi93_tC4Ky3uw3cVcVksrREwXpQ/edit",    // Ch6 行動 ワークブック
+    cre: "https://docs.google.com/spreadsheets/d/1dRgONPRkAnuf9vgfVEedwOgCtBT7R_9B3iXuU-vqJHI/edit",    // Ch7 創作 ワークブック
   },
 
   // ============================================================
